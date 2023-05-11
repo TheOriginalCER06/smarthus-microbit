@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "minode": "github:minodekit/pxt-minode#v1.1.0"
     },
     "files": [
         "main.blocks",
