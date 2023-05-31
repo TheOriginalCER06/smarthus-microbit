@@ -4,9 +4,9 @@ let lightActive = 0
 function changeLed (R: number, G: number, B: number) {
     minode.RGBSetColor(
     ConnName.D12,
-    R,
-    G,
-    B
+    Math.constrain(2.1211e-12 * 3.9961 ** minode.DHTGetTemperature(ConnName.A0, DHTTemStyle.MINODE_DHT_CELSIUS), 1, 255),
+    Math.constrain(-63.5 * minode.DHTGetTemperature(ConnName.A0, DHTTemStyle.MINODE_DHT_CELSIUS) ** 2 + 2794 * minode.DHTGetTemperature(ConnName.A0, DHTTemStyle.MINODE_DHT_CELSIUS) - 30479, 1, 255),
+    Math.constrain(436728007105502.9 * 0.25 ** minode.DHTGetTemperature(ConnName.A0, DHTTemStyle.MINODE_DHT_CELSIUS), 1, 255)
     )
 }
 function clrScrnstpAnimtn () {
